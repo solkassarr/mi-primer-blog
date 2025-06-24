@@ -1,0 +1,53 @@
+body {
+    font-family: 'Courier New', Courier, monospace, sans-serif;
+    background-color: #cc9797;
+    padding: 20px;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.serie {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.serie h2 {
+    margin-top: 0;
+    color: #2c3e50;
+}
+
+.serie img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+    
+
+.serie p {
+    margin: 5px 0;
+    color: #555;
+}
+
+strong {
+    color: #000;
+}
+
+.div_princ{
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}

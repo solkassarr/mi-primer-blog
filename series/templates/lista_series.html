@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title> Series recomendadas por Sol </title>
+    <link rel="stylesheet" href="{% static 'css/series.css' %}">
+</head>
+<body>
+
+    <h1>Series recomendadas por Sol</h1>
+    <div class="div_princ">
+        {% for publicacion in publicaciones %}
+            <div class="serie">
+                <h2>{{ publicacion.nombre }}</h2>
+                
+                {% if publicacion.imagen %}
+                    <img src="{{ publicacion.imagen }}" alt="Imagen de {{ publicacion.nombre }}" class="imagen">
+                {% endif %}
+                
+                <p><strong>Episodios:</strong> {{ publicacion.episodios }}</p>
+                <p><strong>Temporadas:</strong> {{ publicacion.temporadas }}</p>
+                <p><strong>Año:</strong> {{ publicacion.año|date:"Y" }}</p>
+                <p><strong>Pais:</strong>{{ publicacion.pais}}</p>
+                <p><strong>Fecha de publicación:</strong> {{ publicacion.fecha_publicacion|date:"d/m/Y H:i" }}</p>
+                <p>
+                    <a href="{{ publicacion.rating_resumen }}" target="_blank">Ver breve resumen</a>
+    
+    
+                </p>
+            </div>
+        {% empty %}
+            <p>No hay publicaciones disponibles.</p>
+        {% endfor %}
+    </div>
+
+</body>
+</html>
